@@ -47,32 +47,36 @@ public class CellPhoneApplication {
         cellPhone2.setphoneNumber("310-888-9999");
         cellPhone2.setOwner("Batman");
 
-
-        int sNum = cellPhone1.getSerialNumber();
-       String pModel = cellPhone1.getModel();
-       String pCarrier = cellPhone1.getCarrier();
-       String pNum = cellPhone1.getphoneNumber();
-       String pOwner = cellPhone1.getOwner();
-
-        System.out.println(pOwner + " owns a " + pModel + ".");
-        System.out.println("Carrier: " + pCarrier);
-        System.out.println("Phone number: " + pNum);
-        System.out.println("Serial number: " + sNum);
-
         cellPhone1.dial(phoneNumber);
+
+        System.out.println();
+
+        display(cellPhone1);
+
+        System.out.println();
+
+        display(cellPhone2);
+
+        cellPhone1.dial(cellPhone2.getphoneNumber());
+
+        cellPhone2.dial(cellPhone1.getphoneNumber());
+
+
 
 
 
     }
-    public static void display1(CellPhone phone) {
+    public static void display(CellPhone phone) {
 
-        System.out.println(phone.getOwner()  + " owns a " + phone.getOwner() + ".");
+        System.out.println(phone.getOwner()  + " owns a " + phone.getModel() + ".");
         System.out.println("Carrier: " + phone.getCarrier());
         System.out.println("Phone number: " + phone.getphoneNumber());
         System.out.println("Serial number: " + phone.getSerialNumber());
 
 
     }
+
+
 
 
     }
